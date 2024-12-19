@@ -1,0 +1,85 @@
+#content_about {
+    display: flex;
+    flex-direction: column;
+    margin-left: 5rem;
+    margin-right: 5rem;
+
+    .presentation {
+        display: flex;
+        align-self: center;
+
+        .profileImage {
+            border-radius: 5px;
+            overflow: hidden;
+            height: 150px;
+
+            img {
+                height: 150px;
+            }
+        }
+
+        .name_and_title {
+            cursor: default;
+            margin-left: .5rem;
+            align-self: flex-start;
+
+            h2 {
+                font-size: clamp(2rem, 4vw, 3rem);
+                color: transparent;
+                text-shadow: 0 0 5px rgba(0, 150, 255, 0.5);
+                background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+                background-clip: text;
+                line-height: normal;
+            }
+
+            h3 {
+                font-size: clamp(1.5rem, 3vw, 2rem);
+                color: transparent;
+                background: linear-gradient(90deg, var(--text-color), var(--text-color-shade));
+                background-clip: text;
+                line-height: normal;
+            }
+        }
+    }
+
+    .techstack {
+        display: flex;
+        gap: 1.5rem;
+        margin-top: 2rem;
+
+        .techCard {
+            display: flex;
+            max-width: 300px;
+
+            .techName {
+                font-size: 24px;
+            }
+
+            .techDescription {
+                font-size: 16px;
+            }
+
+            .textWrapper {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                margin-left: 1em;
+            }
+
+            .imageWrapper {
+                border: 1px green solid;
+                min-height: 75px;
+                min-width: 75px;
+            }
+        }
+    }
+
+}
+
+.socialMedia {
+        img {
+            height: 30px;
+            border-radius: 30px;
+            background-color: var(--text-color);
+        }
+}

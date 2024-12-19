@@ -1,0 +1,140 @@
+@import url(about.css);
+
+:root {
+    --primary-color: #3498db;
+    --secondary-color: #2c3e50;
+    --text-color: #fff;
+    --text-color-shade: #ffffff91;
+    --background-color: #111;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    box-sizing: border-box;
+    font-family: 'Roboto Mono', monospace;
+}
+
+html,
+body {
+    height: 100%;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4rem;
+    background-color: var(--secondary-color);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .navbar {
+        display: flex;
+        gap: 2rem;
+    
+        label {
+            padding: 0.5rem;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+        }
+        label:hover {
+            background-color: var(--primary-color);
+            color: var(--background-color);
+        }
+        
+    }
+}
+
+
+
+input[type="radio"] {
+    display: none;
+}
+
+main {
+    display: flex;
+
+}
+
+main section {
+    display: none;
+    width: 100%;
+    margin-top: 4rem;
+    padding: 2rem 2rem 0 2rem;
+    flex-direction: column;
+    align-items: center;
+    animation: fade 0.5s ease-in-out;
+}
+
+#nav_home:checked~#content_home,
+#nav_about:checked~#content_about,
+#nav_contact:checked~#content_contact {
+    display: flex;
+}
+
+
+
+@keyframes fade {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes height {
+    from {
+        max-height: 1.6rem;
+    }
+
+    to {
+        max-height: 500px;
+    }
+}
+@keyframes heightshrink {
+    from {
+        max-height: 500px;
+    }
+
+    to {
+        max-height: 1.6rem;
+    }
+}
+
+@keyframes slideDown {
+    from {
+    transform: translatey(-100%);
+    }
+
+    to {
+        transform: translatey(0%);
+    }
+}
+@keyframes slideUp {
+    from {
+    transform: translatey(100%);
+    }
+
+    to {
+        transform: translatey(0%);
+    }
+}
+
+@keyframes rotate90deg {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(90deg);
+    }
+}
