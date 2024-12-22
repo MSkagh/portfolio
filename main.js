@@ -1,1 +1,1 @@
-console.log("Correctly set up")
+console.log("Hey! Dont look at me, this is all just html and css")
