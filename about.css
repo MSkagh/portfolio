@@ -2,11 +2,11 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 1rem;
-
-    .hero-img {
-        border-radius: 5px;
-    }
-
+    max-width: 800px;
+    border-radius: 5px;
+    box-shadow: 1px 1px 15px 5px var(--primary-color-shade);
+    overflow: hidden;
+  
     .hero-content {
         display: grid;
         grid-template-rows: min-content min-content;
@@ -33,6 +33,7 @@
         .hero-cta {
             align-self: flex-end;
             justify-self: flex-end;
+            margin: 0.5rem;
         }
     }
 
