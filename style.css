@@ -1,7 +1,7 @@
-@import url(about.css);
-@import url(socials.css);
-@import url(tech.css);
-@import url(projects.css);
+@import url(styles/about.css);
+@import url(styles/socials.css);
+@import url(styles/tech.css);
+@import url(styles/projects.css);
 
 
 :root {
@@ -119,10 +119,12 @@ button {
 }
 
 button:hover{
-    opacity: 0.9;
+    background-color: var(--accent-color-2);
+    cursor: pointer;
 }
 
 button:active{
+    opacity: 0.75;
     background-color: var(--accent-color-2);
 }
 
