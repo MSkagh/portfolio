@@ -1,3 +1,12 @@
+@media screen and (max-width: 600px) {
+    .socials{
+        flex-direction: column;
+        max-width: 300px;
+        align-items: center;
+    }
+    
+}
+
 .socials {
     display: flex;
     justify-content: center;
