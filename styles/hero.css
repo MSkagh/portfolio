@@ -1,21 +1,23 @@
-
-
 .hero {
+    --flex-direction: row;
+    --content-width: 50%;
+
     display: flex;
-    gap: 1rem;
-    max-width: 600px;
-    border-radius: 5px;
+    flex-direction: var(--flex-direction);
+    max-width: 900px;
+    border-radius: 25px;
     box-shadow: 1px 1px 15px 5px var(--primary-color-shade);
     overflow: hidden;
-    
-    .hero-img{
-        overflow-clip-margin: padding-box;
+
+    .hero-img {
+        width: var(--content-width);
     }
+
     .hero-content {
-        display: block;
+        margin-left: 1em;
+        width: var(--content-width);
         cursor: default;
         text-wrap: balance;
-        position: relative;
 
         h1 {
             color: transparent;
@@ -23,32 +25,29 @@
             background: linear-gradient(90deg, var(--accent-color-1), var(--accent-color-2));
             background-clip: text;
             line-height: normal;
-            margin-bottom: 1rem;
+
         }
 
         h2 {
-
             color: transparent;
             background: linear-gradient(90deg, var(--primary-color), var(--primary-color-shade));
             background-clip: text;
             line-height: normal;
         }
 
-        a {
-            position: absolute;
-            bottom: 0;
-            right: 0;
-            margin: 0.5rem;
+        button {
+            margin: .5em;
         }
     }
 
 
+
 }
 
-@media screen and (max-width: 600px) {
-    .hero{
-        flex-direction: column;
-        max-width: 300px;
+@media screen and (max-width: 650px) {
+    .hero {
+        --flex-direction: column;
+        --content-width: 100%;
     }
-    
+
 }

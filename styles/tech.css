@@ -23,9 +23,15 @@
             box-shadow: 12px 12px 12px rgba(0, 0, 0, 0.1), -10px -10px 10px black;
         }
 
-        i {
-            font-size: 3rem;
+        p{
+            width: 50%;
+            text-align: end;
+            
+        }
 
+        i {
+            width: 50%;
+            font-size: 3rem;
         }
 
         .fa-css3-alt {
@@ -55,6 +61,11 @@
         .fa-docker {
             color: #0db7ed;
         }
-
+        .sql{
+            color: #00758F;
+        }
+        .mongoDB{
+            color: #3FA037;
+        }
     }
 }

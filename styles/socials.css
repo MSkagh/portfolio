@@ -1,10 +1,10 @@
 @media screen and (max-width: 600px) {
-    .socials{
+    .socials {
         flex-direction: column;
         max-width: 300px;
         align-items: center;
     }
-    
+
 }
 
 .socials {
@@ -13,20 +13,21 @@
     gap: 1rem;
     width: 600px;
     position: relative;
-    
-    i{
-       font-size: 9rem;
-       color: lime;
-       transition: color 0.2s;
+
+    i {
+        font-size: 9rem;
+        color: lime;
+        transition: color 0.2s;
     }
-    i:hover{
-       color: rebeccapurple;
+
+    i:hover {
+        color: rebeccapurple;
     }
 
 }
 
 
-.socials::after{
+.socials::after {
     content: "";
     position: absolute;
     bottom: -1rem;
