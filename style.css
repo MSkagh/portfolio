@@ -41,7 +41,7 @@ main {
 }
 
 section {
-    scroll-snap-align: start end;
+    scroll-snap-align: start;
 }
 
 .full-page {
@@ -57,4 +57,11 @@ section {
 img {
     width: 100%;
     height: auto;
+}
+
+@media screen and (max-width: 600px) {
+    section {
+        scroll-snap-align: none;
+    }
+
 }
