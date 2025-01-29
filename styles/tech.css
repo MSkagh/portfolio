@@ -1,75 +1,35 @@
-@media screen and (max-width: 600px) {
-    .tech{
-        flex-direction: column;
-    }
-    
+.fa-css3-alt {
+    color: #e34f26;
 }
 
-.tech {
-    display: flex;
-    gap: 5rem;
-
-    .stack {
-        display: flex;
-        flex-direction: column;
-        gap: 1rem;
-        padding: 1rem;
-
-        .card {
-            display: flex;
-            gap: 0.5rem;
-            padding: 0.5rem;
-            align-items: center;
-            box-shadow: 12px 12px 12px rgba(0, 0, 0, 0.1), -10px -10px 10px black;
-        }
-
-        p{
-            width: 50%;
-            text-align: end;
-            
-        }
-
-        i {
-            width: 50%;
-            font-size: 3rem;
-        }
-
-        .fa-css3-alt {
-            color: #e34f26;
-        }
-
-        .fa-html5 {
-            color: #0080c4;
-        }
-
-        .fa-js {
-            color: #f7df1e;
-        }
-
-        .fa-react {
-            color: #00d8ff;
-        }
-
-        .fa-node-js {
-            color: #6cc24a;
-        }
-
-        .fa-slack {
-            color: #e01563;
-        }
-
-        .fa-docker {
-            color: #0db7ed;
-        }
-        .sql{
-            color: #00758F;
-        }
-        .mongoDB{
-            color: #3FA037;
-        }
-    }
+.fa-html5 {
+    color: #0080c4;
 }
 
-.tech:last-child{
-    margin-bottom: 5em;
+.fa-js {
+    color: #f7df1e;
+}
+
+.fa-react {
+    color: #00d8ff;
+}
+
+.fa-node-js {
+    color: #6cc24a;
+}
+
+.fa-slack {
+    color: #e01563;
+}
+
+.fa-docker {
+    color: #0db7ed;
+}
+
+.sql {
+    color: #00758F;
+}
+
+.mongoDB {
+    color: #3FA037;
 }

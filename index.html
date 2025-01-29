@@ -12,84 +12,93 @@
 
 <body>
     <main>
-        <section class="full-page centered">
-            <div class="hero">
-                <div class="hero-img">
-                    <img src="img/profilepicture.jpg"
+
+        <section class="hero">
+            <div class="container">
+                <div class="row">
+                    <div class="hero__content">
+                        <h1 class="hero__content--name">Martin Skagh</h1>
+                        <h2 class="hero__content--title">Fullstack Developer</h2>
+                        <h2 class="hero__content--location">Sweden</h2>
+                        <a href="mailto:martin.skagh@gmail.com" class="hero__content--button">Hire</a>
+                    </div>
+                    <img class="hero__img" src="img/profilepicture.jpg"
                         alt="A picture of a bearded man sitting by a computer, clearly AI-generated">
                 </div>
-                <div class="hero-content">
-                    <h1>Martin Skagh</h1>
-                    <h2>Fullstack Developer</h2>
-                    <h2>Sweden</h2>
-                    <a href="mailto:martin.skagh@gmail.com"><button class="button-primary hero-cta">Hire me</button></a>
-                </div>
             </div>
         </section>
 
-        <section class="full-page centered">
-            <div class="tech">
-                <div class="stack">
-                    <h2 class="heading">Frontend</h2>
-                    <div class="card">
-                        <i class="fa-brands fa-html5"></i>
-                        <p>HTML</p>
-                    </div>
-                    <div class="card">
-                        <i class="fa-brands fa-css3-alt"></i>
-                        <p>CSS</p>
-                    </div>
-                    <div class="card">
-                        <i class="fa-brands fa-js"></i>
-                        <p>JavaScript</p>
-                    </div>
-                    <div class="card">
-                        <i class="fa-brands fa-react"></i>
-                        <p>React</p>
-                    </div>
+        <section class="tech">
+            <div class="container">
+                <div class="row">
+                <div class="col tech__stack">
+                    <h2 class="tech__stack--category-name">Frontend</h2>
+                    <ol class="tech__stack--list">
+                        <div class="row">
+                            <i class="tech__stack--icon fa-brands fa-html5"></i>
+                            <p class="tech__stack--name">HTML</p>
+                        </div>
+                        <div class="row">
+                            <i class="tech__stack--icon fa-brands fa-css3-alt"></i>
+                            <p class="tech__stack--name">CSS</p>
+                        </div>
+                        <div class="row">
+                            <i class="tech__stack--icon fa-brands fa-js"></i>
+                            <p class="tech__stack--name">JavaScript</p>
+                        </div>
+                        <div class="row">
+                            <i class="tech__stack--icon fa-brands fa-react"></i>
+                            <p class="tech__stack--name">React</p>
+                        </div>
+                    </ol>
                 </div>
-                <div class="stack">
-                    <h2 class="heading">Backend</h2>
-                    <div class="card">
-                        <i class="fa-brands fa-java"></i>
-                        <p>Java / Spring</p>
-                    </div>
-                    <div class="card">
-                        <i class="fa-brands fa-node-js"></i>
-                        <p>Node.js</p>
-                    </div>
-                    <div class="card">
-                        <i class="fa-solid fa-database sql"></i>
-                        <p>SQL</p>
-                    </div>
-                    <div class="card">
-                        <i class="fa-solid fa-database mongoDB"></i>
-                        <p>MongoDB</p>
-                    </div>
+                <div class="col tech__stack">
+                    <h2 class="tech__stack--category-name">Backend</h2>
+                    <ol class="tech__stack--list">
+                        <div class="row">
+                            <i class="tech__stack--icon fa-brands fa-java"></i>
+                            <p class="tech__stack--name">Java / Spring</p>
+                        </div>
+                        <div class="row">
+                            <i class="tech__stack--icon fa-brands fa-node-js"></i>
+                            <p class="tech__stack--name">Node.js</p>
+                        </div>
+                        <div class="row">
+                            <i class="tech__stack--icon fa-solid fa-database sql"></i>
+                            <p class="tech__stack--name">SQL</p>
+                        </div>
+                        <div class="row">
+                            <i class="tech__stack--icon fa-solid fa-database mongoDB"></i>
+                            <p class="tech__stack--name">MongoDB</p>
+                        </div>
+                    </ol>
                 </div>
-                <div class="stack">
-                    <h2 class="heading">Other</h2>
-                    <div class="card">
-                        <i class="fa-brands fa-slack"></i>
-                        <p>Slack</p>
-                    </div>
-                    <div class="card">
-                        <i class="fa-brands fa-figma"></i>
-                        <p>Figma</p>
-                    </div>
-                    <div class="card">
-                        <i class="fa-brands fa-docker"></i>
-                        <p>Docker</p>
-                    </div>
-                    <div class="card">
-                        <i class="fa-brands fa-git"></i>
-                        <p>Git</p>
-                    </div>
+                <div class="col tech__stack">
+                    <h2 class="tech__stack--category-name">Other</h2>
+                    <ol class="tech__stack--list">
+                        <div class="row">
+                            <i class="tech__stack--icon fa-brands fa-slack"></i>
+                            <p class="tech__stack--name">Slack</p>
+                        </div>
+                        <div class="row">
+                            <i class="tech__stack--icon fa-brands fa-figma"></i>
+                            <p class="tech__stack--name">Figma</p>
+                        </div>
+                        <div class="row">
+                            <i class="tech__stack--icon fa-brands fa-docker"></i>
+                            <p class="tech__stack--name">Docker</p>
+                        </div>
+                        <div class="row">
+                            <i class="tech__stack--icon fa-brands fa-git"></i>
+                            <p class="tech__stack--name">Git</p>
+                        </div>
+                    </ol>
                 </div>
+            </div>
             </div>
         </section>
 
-        <section class="full-page centered">
+        <!-- <section class="full-page centered">
             <div class="portfolio">
                 <div class="project">
                     <h2>SpaceRace</h2>
@@ -111,21 +120,23 @@
                     </a>
                 </div>
             </div>
-        </section>
+        </section> -->
 
-        <section class="full-page centered">
-            <div class="socials">
-                <a href="http://www.github.com/Mskagh" target="_blank">
-                    <i class="fa-brands fa-github"></i>
-                </a>
-                <a href="https://www.linkedin.com/in/martin-skagh/" target="_blank">
-                    <i class="fa-brands fa-linkedin"></i>
-                </a>
-                <a href="mailto:martin.skagh@gmail.com">
-                    <i class="fa-regular fa-envelope"></i>
-                </a>
+        <footer class="footer">
+            <div class="container">
+                <div class="row">
+                    <a href="http://www.github.com/Mskagh" target="_blank">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/martin-skagh/" target="_blank">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </a>
+                    <a href="mailto:martin.skagh@gmail.com">
+                        <i class="fa-regular fa-envelope"></i>
+                    </a>
+                </div>
             </div>
-        </section>
+        </footer>
     </main>
 </body>
 
