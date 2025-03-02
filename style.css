@@ -81,13 +81,16 @@ img {
     font-weight: 700;
     letter-spacing: 1px;
     color: var(--light-color);
-
     background-color: var(--primary-color);
     padding: .5em 1em;
     border-radius: 7px;
     justify-self: left;
     margin-top: 1em;
     margin-bottom: 1em;
+}
+
+.hero__content--button:hover {
+    opacity: 0.7;
 }
 
 /* TECH SECTION */
@@ -126,27 +129,30 @@ img {
 }
 
 /* PORTFOLIO SECTION */
-.portfolio{
+.portfolio {
     padding: 1rem 1rem;
     background: var(--dark-color);
 }
-.portfolio > .container > .row{
+
+.portfolio>.container>.row {
     display: flex;
     flex-wrap: wrap;
     align-items: flex-start;
     gap: 1em;
 }
-.project{
+
+.project {
     padding: 1em 2em;
     border-radius: 15px;
     background: linear-gradient(40deg, var(--primary-color) 1%, var(--secondary-color) 25%);
 }
 
-.project > .row{
+.project>.row {
     display: flex;
     flex-wrap: wrap;
 }
-.project__img{
+
+.project__img {
     border-radius: 5px;
     margin-bottom: 1em;
 }
@@ -204,8 +210,9 @@ img {
     .tech>.container>.row {
         gap: 3.25em;
     }
-    .project > .row{
+
+    .project>.row {
         max-width: 200px;
-        
+
     }
 }
