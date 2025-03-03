@@ -158,7 +158,21 @@ img {
     border-radius: 5px;
     margin-bottom: 1em;
 }
+.project__content--button {
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 3px;
+    color: var(--light-color);
+    background-color: var(--primary-color);
+    padding: .5em 1em;
+    border-radius: 7px;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
 
+.project__content--button:hover {
+    opacity: 0.8;
+}
 
 /* FOOTER SECTION */
 
