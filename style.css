@@ -205,19 +205,9 @@ img {
 
 .timeline__list {
     list-style: none;
-    position: relative;
-}
-
-.timeline__list::before {
-    content: "";
-    position: absolute;
-    z-index: 10;
-    top: 0;
-    left: -20px;
-    height: 100%;
-    width: 4px;
-    background-color: var(--dark-shade);
-    border-radius: 3px;
+    display: block;
+    flex-direction: column;
+    width: 100%;
 }
 
 .timeline__item {
@@ -226,21 +216,53 @@ img {
     border-radius: 15px;
     padding: .5em 1em;
     color: var(--dark-shade);
-    max-width: 60ch;
+    margin-left: 1em;
+    width: 100%;
+
 }
-.timeline__item--name{
+
+.timeline__item--name {
+    font-size: 24px;
+    letter-spacing: -1px;
+}
+
+.timeline__item--description{
+    margin: 0.5em 0;
+}
+
+.timeline__item--left {
+    align-self: flex-end;
+}
+
+.timeline__dot,
+.timeline__line {
     position: relative;
 }
-.timeline__item--name::before {
+
+.timeline__line::before {
     content: "";
     position: absolute;
-    top: 10px;
-    left: -40.5px;
-    width: 14px;
+    z-index: 10;
+    top: 0;
+    left: 0%;
+    height: 100%;
+    width: 4px;
+    background-color: var(--dark-shade);
+    border-radius: 3px;
+}
+
+.timeline__dot::before {
+    content: "";
+    position: absolute;
+    top: 18px;
+    left: 0;
     aspect-ratio: 1/1;
+    border: 7px solid white;
     border-radius: 100%;
     background-color: white;
+    transform: translateX(-4.5px);
 }
+
 
 
 @media (min-width:700px) {
@@ -270,6 +292,25 @@ img {
 
     .project>.row {
         max-width: 200px;
+    }
 
+    .timeline__list {
+        display: flex;
+    }
+
+    .timeline__item {
+        max-width: 45%;
+    }
+    .timeline__line::before{
+        left: 50%;
+    }
+    .timeline__dot::before{
+        left: 50%;
+    }
+    .timeline__item{
+        text-align: right;
+    }
+    .timeline__item--left{
+        text-align: left;
     }
 }
