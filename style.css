@@ -35,6 +35,18 @@ section {
     align-items: center;
 }
 
+.line{
+    display: flex;
+    align-items: center;
+}
+
+.section__header {
+    text-align: center;
+    font-weight: normal;
+    letter-spacing: 4px;
+    margin-bottom: 1em;
+}
+
 img {
     max-width: 100%;
     height: auto;
@@ -107,14 +119,16 @@ img {
     justify-content: center;
     flex-wrap: wrap;
     gap: 1.25em;
-}
+} 
 
-.tech__stack--list>.row {
-    display: flex;
-    align-items: center;
-    gap: 0.25em;
+.tech__disclaimer{
+    font-weight: normal;
+    font-size: 1rem;
+    max-width: 60ch;
+    margin: 0 auto;
+    margin-bottom: 1em;
+    text-wrap: balance;
 }
-
 .tech__stack.col {
     min-width: 140px;
 }
@@ -208,13 +222,6 @@ img {
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-.timeline__header {
-    text-align: center;
-    font-weight: normal;
-    letter-spacing: 4px;
-    margin-bottom: 1em;
 }
 
 .timeline__list {
