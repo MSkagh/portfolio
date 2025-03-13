@@ -292,7 +292,17 @@ img {
     transform: translateX(-4.5px);
 }
 
-
+#game__dialog{
+    width: 900px;
+    height: 700px;
+    margin: auto;
+    justify-content: center;
+}
+#game__canvas{
+    position: relative;
+    left: 50%;
+    translate: -50%;
+}
 
 @media (min-width:700px) {
     .row:has(.col) {
