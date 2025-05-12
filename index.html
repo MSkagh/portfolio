@@ -110,12 +110,16 @@
                     <div class="project">
                         <img class="project__img" src="/img/no-image.png" alt="">
                         <div class="project__content">
-                            <h2 class="project__content--name">A secret on this site</h2>
-                            <p class="project__content--description">Not yet implemented
+                            <h2 class="project__content--name">A game engine</h2>
+                            <p class="project__content--description">Now this one is poorly planned with no clear goal
+                                and no real methods. So what is it? Well, its a challenge. Using vanilla JS without
+                                libraries or dependencies I will build a 2D metroidvania-esqe game. This is a big
+                                project with alot of different needs. And thats the point. By building everything myself
+                                I will learn different skills. As of now, there is not much to show, just a barebones
+                                state machine and a scene manager. The scene seen is auto tiled with a blobtiling
+                                approach.
                             </p>
-                            <a href="https://github.com/MSkagh/Portfolio" target="_blank">
-                                <button class="project__content--button">View on Github</button>
-                            </a>
+                            <button id="show-game-button" class="project__content--button">Boot up game</button>
                         </div>
                     </div>
                     <div class="project">
@@ -222,8 +226,7 @@
                 </div>
             </div>
         </footer>
-        <button id="show-game-button" class="project__content--button">Boot up game</button>
-        
+
         <dialog id="game__dialog">
             <canvas id="game__canvas"></canvas>
             <button id="hide-game-button" class="project__content--button">Close Game</button>

@@ -23,7 +23,7 @@ export class TitleState extends State {
         this.context.fillRect(0, 0, this.canvas.width, this.canvas.height);
         this.context.fillStyle = 'white';
         this.context.font = '48px Comic Sans';
-        this.context.fillText('Metroidvania Game', 100, 200);
+        this.context.fillText('A game-engine in the making.', 100, 200);
         this.context.font = '24px Arial';
         this.context.fillText('Press Enter to Start', 150, 300);
     }
@@ -76,6 +76,6 @@ export class PauseState extends State {
         this.context.font = '48px Arial';
         this.context.fillText('Paused', 200, 200);
         this.context.font = '24px Arial';
-        this.context.fillText('Press Enter to Resume', 150, 300);
+        this.context.fillText('Press Tab to Resume', 150, 300);
     }
 }

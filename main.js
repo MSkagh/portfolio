@@ -37,6 +37,7 @@ document.getElementById('show-game-button').addEventListener('click', () => {
     document.addEventListener('keydown', customKeydownHandler)
 })
 document.getElementById('hide-game-button').addEventListener('click', () => {
+    stateMachine.changeState('title')
     dialog.close()
     document.removeEventListener('keydown', customKeydownHandler)
 })
