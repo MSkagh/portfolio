@@ -1,11 +1,20 @@
-class CanvasManager {
+export class CanvasManager {
+    static instance = null;
+
     constructor() {
-        if (!CanvasManager.instance) {
-            this.canvas = document.getElementById('game__canvas');
-            this.ctx = this.canvas.getContext('2d');
-            CanvasManager.instance = this;
+        if (CanvasManager.instance) {
+            return CanvasManager.instance;
         }
-        return CanvasManager.instance;
+        this.canvas = document.getElementById('game__canvas');
+        this.context = this.canvas.getContext('2d');
+        this.canvas.width = 800;
+        this.canvas.height = 608;
+        CanvasManager.instance = this;
+
+    }
+    changeBackgroundColor(color) {
+        this.context.fillStyle = color; // Set background color
+        this.context.fillRect(0, 0, this.canvas.width, this.canvas.height); // Fill entire canvas
     }
 
     getCanvas() {
@@ -13,11 +22,6 @@ class CanvasManager {
     }
 
     getContext() {
-        return this.ctx;
+        return this.context;
     }
 }
-
-const instance = new CanvasManager();
-Object.freeze(instance);
-
-export default instance;

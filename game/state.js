@@ -1,10 +1,11 @@
-import CanvasManager from './canvasManager.js'
-
+import { CanvasManager } from './canvasManager.js'
+import InputManager from "./inputManager.js";
 
 export class State {
     constructor() {
-        this.canvas = CanvasManager.getCanvas()
-        this.context = CanvasManager.getContext()
+        this.canvas = CanvasManager.instance.canvas;
+        this.context = CanvasManager.instance.context;
+        this.input = new InputManager();
     }
     enter() {
         // Initialize state-specific data

@@ -1,8 +1,16 @@
-export class StateMachine {
+export class StateManager {
+    static instance = null;
+
     constructor() {
+        if (StateManager.instance) {
+            return StateManager.instance;
+        }
+
+        StateManager.instance = this;
         this.states = {};
         this.currentState = null;
     }
+
 
     addState(name, state) {
         this.states[name] = state;

@@ -1,21 +1,20 @@
 import { State } from "./state.js";
 import SceneManager from "./sceneManager.js";
-import {level1} from './scenes.js'
+import {loadLevel1} from './scenes.js'
+import { StateManager } from "./stateManager.js";
 
 export class TitleState extends State {
     constructor() {
         super()
     }
-
+    
+    // Initialize title state-specific data
     enter() {
-        // Initialize title state-specific data
     }
-
+    
+    // Handle input and update title state-specific logic
     update() {
-        // Handle input and update title state-specific logic
-        if (this.run) {
-            stateMachine.changeState('game');
-        }
+        if (this.input.isKeyPressed("Enter")) StateManager.instance.changeState("game");
     }
 
     draw() {
@@ -33,8 +32,9 @@ export class GameState extends State {
     constructor() {
         super()
         this.sceneManager = new SceneManager();
-        this.sceneManager.addScene('level1', level1)
+        this.sceneManager.addScene('level1', loadLevel1())
         this.sceneManager.switchToScene('level1');
+
     }
     enter() {
         // Initialize game state-specific data
@@ -42,6 +42,9 @@ export class GameState extends State {
 
     update() {
         // Update game state-specific logic
+        if (this.input.isKeyPressed("Tab")) StateManager.instance.changeState("pause");
+        this.sceneManager.update()
+
     }
 
     draw() {
@@ -64,9 +67,8 @@ export class PauseState extends State {
 
     update() {
         // Handle input and update pause state-specific logic
-        if (this.unPaused) {
-            stateMachine.changeState('game');
-        }
+        if (this.input.isKeyPressed("Tab")) StateManager.instance.changeState("game");
+
     }
 
     draw() {
