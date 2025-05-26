@@ -1,6 +1,6 @@
 import { State } from "./state.js";
 import SceneManager from "./sceneManager.js";
-import {loadLevel1} from './scenes.js'
+import {load_r_10_3, load_r_10_2, load_r_10_4} from './scenes.js'
 import { StateManager } from "./stateManager.js";
 
 export class TitleState extends State {
@@ -32,8 +32,10 @@ export class GameState extends State {
     constructor() {
         super()
         this.sceneManager = new SceneManager();
-        this.sceneManager.addScene('level1', loadLevel1())
-        this.sceneManager.switchToScene('level1');
+        this.sceneManager.addScene('r_10_2', load_r_10_2())
+        this.sceneManager.addScene('r_10_3', load_r_10_3())
+        this.sceneManager.addScene('r_10_4', load_r_10_4())
+        this.sceneManager.switchToScene('r_10_3');
 
     }
     enter() {

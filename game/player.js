@@ -3,7 +3,7 @@ export class Player {
         this.size = { width: 20, height: 20 };
         this.originalSize = { width: 20, height: 20 };
         this.color = "Red";
-        this.position = { x: 400, y: 300 };
+        this.position = { x: 40, y: 550 };
         this.velocity = { x: 0, y: 0 };
         this.center = { x: 0, y: 0 };
 
