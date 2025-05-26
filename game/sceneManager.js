@@ -49,17 +49,15 @@ export default class SceneManager {
         }
     }
     movePlayer(direction) {
-        console.log('trying to go: ' + direction)
         let newX = this.playerWorldPosition.x;
         let newY = this.playerWorldPosition.y;
-        console.log(newX)
+
         switch (direction) {
             case "left": newX--; break;
             case "right": newX++; break;
             case "up": newY--; break;
             case "down": newY++; break;
         }
-        console.log(this.worldMap[newY])
 
         if (this.worldMap[newY] && this.worldMap[newY][newX]) {
             this.playerWorldPosition.x = newX;
