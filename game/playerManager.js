@@ -61,11 +61,11 @@ export class PlayerManager {
             this.player.velocity.x = 0; // Stop when no input
         }
 
-        if (this.input.isKeyHeld("ArrowUp")) {
-            this.player.velocity.y = -300 * deltaTime; // Apply jump force
-        } else {
-            this.player.velocity.y += 10 * deltaTime; // Apply gravity properly
+        if (this.input.isKeyPressed("ArrowUp")) {
+            this.player.velocity.y = -600 * deltaTime; // Apply jump force
         }
+        this.player.velocity.y += 10 * deltaTime; // Apply gravity properly
+        
 
         if (this.input.isKeyHeld("ArrowDown")) {
             if (this.player.size.height === this.player.originalSize.height) {
