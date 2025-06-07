@@ -5,11 +5,14 @@ import { Player } from "./player.js";
 import SceneManager from "./sceneManager.js";
 
 export class PlayerManager {
+    static instance;
     constructor() {
+        if (PlayerManager.instance) return PlayerManager.instance
         this.player = new Player();
         this.input = new InputManager();
         this.context = CanvasManager.instance.context;
         this.sceneManager = SceneManager.instance;
+        this.instance = this;
     }
     draw() {
         this.player.draw(this.context);
@@ -23,7 +26,6 @@ export class PlayerManager {
         this.handleInput(deltaTime); // Process input first
 
         const totalSteps = Math.ceil(Math.max(Math.abs(this.player.velocity.x), Math.abs(this.player.velocity.y)));
-
 
         const stepX = this.player.velocity.x / totalSteps;
         const stepY = this.player.velocity.y / totalSteps;
@@ -43,7 +45,8 @@ export class PlayerManager {
 
             if (!isCollidingY) {
                 this.player.setPosition(this.player.position.x, nextY);
-            } else {
+            } else{
+                if (this.player.velocity.y > 0) this.player.isGrounded = true;
                 this.player.velocity.y = 0;
             }
         }
@@ -53,6 +56,9 @@ export class PlayerManager {
 
 
     handleInput(deltaTime) {
+
+        this.player.velocity.y += 10 * deltaTime; // Apply gravity properly
+
         if (this.input.isKeyHeld("ArrowLeft")) {
             this.player.velocity.x = -300 * deltaTime;
         } else if (this.input.isKeyHeld("ArrowRight")) {
@@ -61,10 +67,10 @@ export class PlayerManager {
             this.player.velocity.x = 0; // Stop when no input
         }
 
-        if (this.input.isKeyPressed("ArrowUp")) {
+        if (this.input.isKeyPressed("ArrowUp") && this.player.isGrounded) {
+            this.player.isGrounded = false;
             this.player.velocity.y = -600 * deltaTime; // Apply jump force
         }
-        this.player.velocity.y += 10 * deltaTime; // Apply gravity properly
         
 
         if (this.input.isKeyHeld("ArrowDown")) {
