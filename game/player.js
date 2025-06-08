@@ -8,9 +8,10 @@ export class Player {
         this.position = { x: 40, y: 550 };
         this.velocity = { x: 0, y: 0 };
         this.center = { x: 0, y: 0 };
-        this.isGrounded = true;
+        this.jumpCount = 2;
+        this.abilities = ["doubleJump"];
         this.updateCenter();
-        this.instance = this
+        this.instance = this;
     }
 
     updateCenter() {

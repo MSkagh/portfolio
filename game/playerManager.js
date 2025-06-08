@@ -40,13 +40,17 @@ export class PlayerManager {
             if (!isCollidingX) {
                 this.player.setPosition(nextX, this.player.position.y);
             } else {
-                this.player.velocity.x = 0; // Stop at collision
+                //Stop horizontal collision
+                this.player.velocity.x = 0;
             }
 
             if (!isCollidingY) {
                 this.player.setPosition(this.player.position.x, nextY);
             } else{
-                if (this.player.velocity.y > 0) this.player.isGrounded = true;
+                //reset the jumpCount only when the player is colliding with something on a downward movement.
+                if (this.player.velocity.y > 0) this.player.abilities.includes("doubleJump") ? this.player.jumpCount = 2 : this.player.jumpCount = 1;
+                
+                //Stop vertical collision
                 this.player.velocity.y = 0;
             }
         }
@@ -67,8 +71,8 @@ export class PlayerManager {
             this.player.velocity.x = 0; // Stop when no input
         }
 
-        if (this.input.isKeyPressed("ArrowUp") && this.player.isGrounded) {
-            this.player.isGrounded = false;
+        if (this.input.isKeyPressed("ArrowUp") && this.player.jumpCount > 0) {
+            this.player.jumpCount -= 1;
             this.player.velocity.y = -600 * deltaTime; // Apply jump force
         }
         
