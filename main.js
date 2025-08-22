@@ -9,7 +9,8 @@ import SceneManager from "./game/sceneManager.js";
 
 const dialog = document.getElementById('game__dialog')
 
-let inputManager = null;
+let inputManager = new InputManager();
+let isGameControlsActive = false;
 let stateManager = null;
 const canvasManager = new CanvasManager();
 const playerManager = new PlayerManager();
@@ -20,8 +21,9 @@ const startGame = () => {
     if (!stateManager) {
         stateManager = new StateManager();; // Initialize only when needed
     }
-    if (!inputManager) {
-        inputManager = new InputManager(); // Initialize only when needed
+    if (!isGameControlsActive) {
+        inputManager.addEventListeners();
+        isGameControlsActive = true;
     }
     stateManager.addState('title', new TitleState());
     stateManager.addState('game', new GameState());
@@ -49,7 +51,7 @@ document.getElementById('show-game-button').addEventListener('click', () => {
 })
 document.getElementById('hide-game-button').addEventListener('click', () => {
     stateManager.changeState('title')
+    inputManager.removeEventListeners();
+    isGameControlsActive = false;
     dialog.close()
 })
-
-

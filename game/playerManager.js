@@ -61,7 +61,7 @@ export class PlayerManager {
 
     handleInput(deltaTime) {
 
-        this.player.velocity.y += 10 * deltaTime; // Apply gravity properly
+        this.player.velocity.y += 30 * deltaTime; // Apply gravity properly
 
         if (this.input.isKeyHeld("ArrowLeft")) {
             this.player.velocity.x = -300 * deltaTime;
