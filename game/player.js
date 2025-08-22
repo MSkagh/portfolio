@@ -1,4 +1,4 @@
-export class Player {
+class Player {
     static instance;
     constructor() {
         if (Player.instance) return Player.instance
@@ -51,3 +51,5 @@ export class Player {
         );
     }
 }
+const player = new Player();
+export default player

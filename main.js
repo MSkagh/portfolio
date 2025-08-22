@@ -2,9 +2,6 @@ import { StateManager } from "./game/stateManager.js"
 import { TitleState, GameState, PauseState } from "./game/states.js"
 import InputManager from "./game/inputManager.js";
 import { CanvasManager } from "./game/canvasManager.js";
-import { PlayerManager } from "./game/playerManager.js";
-import SceneManager from "./game/sceneManager.js";
-
 
 
 const dialog = document.getElementById('game__dialog')
@@ -12,10 +9,8 @@ const dialog = document.getElementById('game__dialog')
 let inputManager = new InputManager();
 let isGameControlsActive = false;
 let stateManager = null;
-const canvasManager = new CanvasManager();
-const playerManager = new PlayerManager();
-const sceneManager = new SceneManager();
 
+const canvasManager = new CanvasManager();
 
 const startGame = () => {
     if (!stateManager) {

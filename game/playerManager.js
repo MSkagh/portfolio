@@ -1,14 +1,13 @@
 import { CanvasManager } from "./canvasManager.js"
-
 import InputManager from "./inputManager.js";
-import { Player } from "./player.js";
 import SceneManager from "./sceneManager.js";
+import player from "./player.js";
 
 export class PlayerManager {
     static instance;
     constructor() {
         if (PlayerManager.instance) return PlayerManager.instance
-        this.player = new Player();
+        this.player = player;
         this.input = new InputManager();
         this.context = CanvasManager.instance.context;
         this.sceneManager = SceneManager.instance;

@@ -1,5 +1,6 @@
 import { CanvasManager } from './canvasManager.js'
 import { worldMap } from './worldMap.js'
+import player from './player.js';
 
 export default class SceneManager {
     static instance = null;
@@ -58,7 +59,10 @@ export default class SceneManager {
             case "up": newY--; break;
             case "down": newY++; break;
         }
-
+        const cm = new CanvasManager();
+        //set the horizontal position of the player to match where it would appear on the new sceen
+        direction == "right" ? player.position.x = 0 + player.size.width : player.position.x = cm.canvas.width - (player.size.width);
+       
         if (this.worldMap[newY] && this.worldMap[newY][newX]) {
             this.playerWorldPosition.x = newX;
             this.playerWorldPosition.y = newY;
