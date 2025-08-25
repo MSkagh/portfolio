@@ -18,7 +18,7 @@ export class TitleState extends State {
     }
 
     draw() {
-        this.context.fillStyle = 'black';
+        this.context.fillStyle = 'green';
         this.context.fillRect(0, 0, this.canvas.width, this.canvas.height);
         this.context.fillStyle = 'white';
         this.context.font = '48px Comic Sans';
@@ -51,6 +51,9 @@ export class GameState extends State {
 
     draw() {
         this.sceneManager.draw()
+        this.context.fillStyle = 'white';
+        this.context.font = '24px Comic Sans';
+        this.context.fillText('arrow keys to move, tab to pause', this.canvas.width/4, this.canvas.height/4);
     }
 
     exit() {

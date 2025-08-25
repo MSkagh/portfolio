@@ -33,6 +33,8 @@ section {
 .row {
     display: block;
     align-items: center;
+    justify-content: center;
+
 }
 
 .line{
@@ -42,7 +44,8 @@ section {
 
 .section__header {
     text-align: center;
-    font-weight: normal;
+    font-weight: 700;
+    font-size: 36px;
     letter-spacing: 4px;
     margin-bottom: 1em;
 }
@@ -64,8 +67,11 @@ img {
 
 .hero__img {
     order: 1;
+    aspect-ratio: 1;
+    object-fit: cover;
     margin-right: 2rem;
-    border-radius: 3px;
+    border-radius: 10px;
+    
 }
 
 .hero__content {
@@ -116,7 +122,6 @@ img {
 
 .tech>.container>.row {
     display: flex;
-    justify-content: center;
     flex-wrap: wrap;
     gap: 1.25em;
 } 
