@@ -31,7 +31,7 @@ section {
 }
 
 .row {
-    display: block;
+    display: flex;
     align-items: center;
     justify-content: center;
 
@@ -121,7 +121,6 @@ img {
 }
 
 .tech>.container>.row {
-    display: flex;
     flex-wrap: wrap;
     gap: 1.25em;
 } 
@@ -156,7 +155,6 @@ img {
 }
 
 .portfolio>.container>.row {
-    display: flex;
     flex-wrap: wrap;
     align-items: flex-start;
     gap: 1em;
@@ -172,7 +170,7 @@ img {
 }
 
 .project>.row {
-    display: flex;
+
     flex-wrap: wrap;
 }
 
@@ -181,8 +179,8 @@ img {
     border-radius: 5px;
     margin-bottom: 1em;
 }
-.project__content{
-    width: 100%;
+.project__content .row{
+    gap: 1em
 }
 .project__content--button {
     text-transform: uppercase;
@@ -316,7 +314,6 @@ img {
     }
 
     .row {
-        display: flex;
         flex-wrap: nowrap;
         justify-content: center;
     }
@@ -325,7 +322,10 @@ img {
         max-width: 40%;
         margin-left: 2em;
     }
-
+    .hero .container{
+        display: flex;
+        justify-content: center;
+    }
     .tech__stack--list>.row {
         justify-content: flex-start;
     }
