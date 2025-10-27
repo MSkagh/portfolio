@@ -73,7 +73,7 @@ img {
     z-index: 2;
     overflow: hidden;
 
-    
+
 }
 
 .primary-button:active {
@@ -92,7 +92,7 @@ img {
     left: 0;
     z-index: -1;
     translate: -50% 0;
-    
+
 
 }
 
@@ -102,13 +102,15 @@ img {
 }
 
 @keyframes background-bounce {
-    0%{
+    0% {
         translate: -50% 0;
     }
-    60%{
+
+    60% {
         translate: -10% 0;
     }
-    100%{
+
+    100% {
         translate: -15% 0;
     }
 
