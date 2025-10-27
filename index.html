@@ -15,16 +15,16 @@
 
         <section class="hero">
             <div class="container">
-                
-                    <div class="hero__content">
-                        <h1 class="hero__content--name">Martin Skagh</h1>
-                        <h2 class="hero__content--title">Fullstack Developer</h2>
-                        <h2 class="hero__content--location">Sweden</h2>
-                        <a href="mailto:martin.skagh@gmail.com" class="hero__content--button">Hire</a>
-                    </div>
-                    <img class="hero__img" src="img/Portrait.jpg"
-                        alt="A picture of a bearded man sitting by a computer, clearly AI-generated">
-               
+
+                <div class="hero__content">
+                    <h1 class="hero__content--name">Martin Skagh</h1>
+                    <h2 class="hero__content--title">Fullstack Developer</h2>
+                    <h2 class="hero__content--location">Sweden</h2>
+                    <a href="mailto:martin.skagh@gmail.com" class="primary-button">Hire</a>
+                </div>
+                <img class="hero__img" src="img/Portrait.jpg"
+                    alt="A picture of a the developer">
+
             </div>
         </section>
 
@@ -103,11 +103,14 @@
         <section class="portfolio">
             <div class="container">
                 <h1 class="section__header">Projects</h1>
-                <div class="row">
+                <div class="project_wrapper">
 
                     <div class="project">
-                        <img class="project__img" src="/portfolio/img/logoEchoForge.png" alt="">
                         <div class="project__content">
+                        <div class="project__image_wrapper">
+                            <img class="project__img" src="../img/logoEchoForge.png" alt="Logo of EchoForge">
+                        </div>
+                        
                             <h2 class="project__content--name">EchoForge</h2>
                             <p class="project__content--description">
                                 Written in C#, this is my own game engine. An ongoing project for personal growth. The
@@ -116,41 +119,46 @@
                                 </br></br>
                                 This started as a JavaScript project but has since been translated to C#. The prof of
                                 concept can be demoed below</p>
-                            <button id="show-game-button" class="project__content--button">Prof of concept</button>
+
                         </div>
+                        <a id="show-game-button" class="primary-button">Prof of concept</a>
                     </div>
+
                     <div class="project">
-                        <img class="project__img" src="/portfolio/img/weatherNow.png" alt="">
                         <div class="project__content">
+                            <div class="project__image_wrapper">
+                                <img class="project__img" src="../img/weatherNow.png" alt="A screenshot of a weather app">
+                            </div>
                             <h2 class="project__content--name">Weather Now</h2>
                             <p class="project__content--description">A medium-sized project where information is
                                 gathered through openMATEO.
                                 <br><br>
                                 The design is by the great people
-                                over at <a href="https://www.frontendmentor.io/">frontendmentor.io</a>.
+                                over at <a href="https://www.frontendmentor.io/" target="_blank">frontendmentor.io</a>.
                             </p>
-                            <div class="row">
-                                <a href="https://github.com/MSkagh/weather_now" target="_blank">
-                                    <button class="project__content--button">View on Github</button>
-                                </a>
-                                <a href="https://mskagh.github.io/weather_now/" target="_blank">
-                                    <button class="project__content--button">Live site</button>
-                                </a>
-                            </div>
+                        </div>
+                        <div>
+                            <a href="https://github.com/MSkagh/weather_now" target="_blank"
+                                class="primary-button">View on Github</a>
+                            <a href="https://mskagh.github.io/weather_now/" target="_blank"
+                                class="primary-button">Live site</a>
                         </div>
                     </div>
+             
                     <div class="project">
-                        <img class="project__img" src="/portfolio/img/noImage.png" alt="">
                         <div class="project__content">
-                            <h2 class="project__content--name">Meal prepper</h2>
-                            <p class="project__content--description">An app for storing recipes and planning a work-week
-                                worth of meals
+                            <div class="project__image_wrapper">
+                                <img class="project__img" src="../img/roman_date_picker.png" alt="A screenshot depicting a datepicker form with roman theme">
+                            </div>
+                            <h2 class="project__content--name">Roman Date Picker</h2>
+                            <p class="project__content--description">My entry into the <a href="https://badux.lol/" target="_blank">Bad Ux World Cup</a>. It's not a bad UI, but if your not familiar with roman numerals it will be a quite unpleasant user experience.
                             </p>
-                            <a href="https://github.com/MSkagh/Meal_planner" target="_blank">
-                                <button class="project__content--button">View on Github</button>
-                            </a>
                         </div>
+                        <a href="https://mskagh.github.io/roman_datepicker/" target="_blank"
+                            class="primary-button">Live site</a>
                     </div>
+
+
                 </div>
             </div>
         </section>
@@ -246,7 +254,7 @@
 
         <dialog id="game__dialog">
             <canvas id="game__canvas"></canvas>
-            <button id="hide-game-button" class="project__content--button">Close Game</button>
+            <button id="hide-game-button" class="primary-button">Close Game</button>
 
         </dialog>
     </main>
